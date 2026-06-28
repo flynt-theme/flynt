@@ -204,7 +204,7 @@ const GUTTER_WS = [14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14];
 
 function renderPreview() {
     const b = base();
-    const win = document.getElementById("preview");
+    const win = document.getElementById("preview-window");
     const pri = P.primaryShade[theme];
 
     const sidebar = SIDEBAR_ITEMS.map(
@@ -448,14 +448,7 @@ function renderSwitcher() {
     ["dark", "light"].forEach((t) => {
         const pill = document.getElementById(`pill-${t}`);
         const option = document.getElementById(`mode-${t}`);
-        const pri = P.primaryShade[t];
-        pill.innerHTML = "";
-        for (const name of Object.keys(P.hues)) {
-            const dot = document.createElement("div");
-            dot.className = "pill-dot";
-            dot.style.background = accents[name][pri];
-            pill.appendChild(dot);
-        }
+        pill.style.background = P.base[t].bg;
         option.classList.toggle("active", t === theme);
     });
 }

@@ -16,58 +16,66 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="wrap">
-            <div class="mode-switcher">
-                <div class="mode-option" id="mode-dark" onclick="setTheme('dark')">
-                    <span class="mode-label">Dark</span>
-                    <div class="mode-pill" id="pill-dark" style="background: #100e0c"></div>
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="header-logo">
+                    <img src="assets/flynt-logo.png" width="22" height="22" alt="Flynt" />
+                    <span class="header-wordmark">Flynt</span>
                 </div>
-                <div class="mode-option" id="mode-light" onclick="setTheme('light')">
-                    <span class="mode-label">Light</span>
-                    <div class="mode-pill" id="pill-light" style="background: #fffcef"></div>
-                </div>
-            </div>
-
-            <header>
-                <div class="header-top">
-                    <div class="header-logo">
-                        <img src="assets/flynt-logo.png" width="28" height="28" alt="Flynt" />
-                        <h1>Flynt</h1>
+                <nav class="header-nav">
+                    <a href="#preview">Preview</a>
+                    <a href="#palette">Palette</a>
+                    <a href="#philosophy">Philosophy</a>
+                    <a href="#style-guide">Style Guide</a>
+                    <a href="#ports">Ports</a>
+                </nav>
+                <div class="header-actions">
+                    <div class="mode-switcher">
+                        <div class="mode-option" id="mode-dark" onclick="setTheme('dark')">
+                            <span class="mode-label">Dark</span>
+                            <div class="mode-pill" id="pill-dark" style="background: #100e0c"></div>
+                        </div>
+                        <div class="mode-option" id="mode-light" onclick="setTheme('light')">
+                            <span class="mode-label">Light</span>
+                            <div class="mode-pill" id="pill-light" style="background: #fffcef"></div>
+                        </div>
                     </div>
                     <a class="github-link" href="https://github.com/flynt-theme/flynt" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.341-3.369-1.341-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
                         </svg>
                         GitHub
                     </a>
                 </div>
-                <span class="tagline">Warm tones. Zero visual noise.</span>
-            </header>
+            </div>
+        </header>
 
-            <section>
+        <div class="wrap">
+            <div class="hero">
+                <h1>Flynt</h1>
+                <p class="tagline">Warm tones. Zero visual noise.</p>
+            </div>
+
+            <section id="preview">
                 <h2>Preview</h2>
-                <div class="preview-window" id="preview"></div>
+                <div class="preview-window" id="preview-window"></div>
             </section>
 
-            <section>
+            <section id="palette">
                 <h2>Base</h2>
                 <div id="base-bg" class="swatch-row"></div>
                 <div id="base-tx" class="swatch-row" style="margin-top: 8px"></div>
-            </section>
 
-            <section>
-                <h2>Accents</h2>
+                <h2 style="margin-top: 48px">Accents</h2>
                 <div id="accent-row" class="swatch-row"></div>
-            </section>
 
-            <section>
-                <h2>Extended</h2>
+                <h2 style="margin-top: 48px">Extended</h2>
                 <div class="shade-wrap">
                     <div id="shade-grid" class="shade-grid"></div>
                 </div>
             </section>
 
-            <section>
+            <section id="philosophy">
                 <h2>Philosophy</h2>
 
                 <h3>Strip the rainbow</h3>
@@ -83,7 +91,7 @@
                 <p>Braces, brackets, and delimiters use full contrast. The shape of the code carries real information, and Flynt doesn't dim it.</p>
             </section>
 
-            <section>
+            <section id="style-guide">
                 <h2>Style Guide</h2>
 
                 <h3>Interface</h3>
@@ -102,7 +110,7 @@
                 <table id="t-terminal"></table>
             </section>
 
-            <section>
+            <section id="ports">
                 <h2>Ports</h2>
                 <ul class="port-list">
                     <li class="port-item">
@@ -129,7 +137,7 @@
             </section>
 
             <footer>
-                <span>Press <kbd>D</kbd> to toggle theme</span>
+                <a href="https://github.com/flynt-theme" target="_blank" rel="noopener noreferrer">Flynt Theme</a>
             </footer>
         </div>
 
