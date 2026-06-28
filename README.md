@@ -5,7 +5,7 @@
   <h1 align="center">Flynt</h1>
 </p>
 
-<p align="center">Warm undertones in dark and light. Amber accents, ten hues at 50% saturation.</p>
+<p align="center">Warm tones. Zero visual noise.</p>
 
 <p align="center">
   <a href="https://flynt-theme.github.io/flynt">Palette</a>
