@@ -655,19 +655,19 @@
                 <h2>Philosophy</h2>
 
                 <h3>Keywords are not colorized</h3>
-                <p>Most themes assign their most saturated color to reserved words — <code>if</code>, <code>for</code>, <code>return</code>, <code>const</code>. Flynt renders them in body-text weight instead. Keywords are grammatical connective tissue. You already know what they mean; they shouldn't compete for attention.</p>
+                <p>In most themes, <code>if</code>, <code>for</code>, <code>return</code>, and <code>const</code> are among the brightest things on screen. Flynt renders them in plain body-text weight. You already know what they mean; they don't need to pull focus.</p>
 
                 <h3>Functions take the primary accent</h3>
-                <p>Amber — the signature accent — goes to function names at definition and call sites. This inverts the visual hierarchy of most themes: your eye is drawn to what code is <em>doing</em>, not to its syntactic scaffolding.</p>
+                <p>Amber, the primary accent, goes to function names at definition and call sites. This flips the usual hierarchy: your eye goes to what code is <em>doing</em>, not to its syntactic structure.</p>
 
                 <h3>Properties recede</h3>
-                <p><code>obj.field</code> reads as an expression, not two equally weighted tokens. Object members and struct fields use <code>tx-4</code>, the second-to-dimmest foreground. The property is structural noise; you parse it but don't need to focus on it.</p>
+                <p>Object members and struct fields use <code>tx-4</code>, one step above the faintest foreground. <code>obj.field</code> should read as an expression, not as two equally weighted tokens. The field name is part of the syntax but rarely where the meaning is.</p>
 
                 <h3>Punctuation reads at full contrast</h3>
-                <p>Braces, brackets, and delimiters use <code>tx</code> — full foreground. Most themes dim these. Flynt treats structural delimiters as load-bearing: the shape of the code matters as much as its tokens.</p>
+                <p>Braces, brackets, and delimiters use <code>tx</code>, the full foreground weight. Most themes dim these. The shape of the code carries real information, and Flynt doesn't trade away structural clarity to make tokens pop.</p>
 
                 <h3>Comments nearly disappear</h3>
-                <p>Comments use <code>tx-5</code>, the faintest available token. Once read, a comment should recede. If it stays visible it competes with the code it describes.</p>
+                <p>Comments use <code>tx-5</code>, the faintest foreground. Once you've read a comment it has no reason to keep drawing your eye. If it stays visible, it's competing with the code it's describing.</p>
             </section>
 
             <section>

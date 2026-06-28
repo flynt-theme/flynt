@@ -5,7 +5,7 @@
   <h1 align="center">Flynt</h1>
 </p>
 
-<p align="center">Warm undertones in dark and light — amber accents, ten hues at 50% saturation.</p>
+<p align="center">Warm undertones in dark and light. Amber accents, ten hues at 50% saturation.</p>
 
 <p align="center">
   <a href="https://flynt-theme.github.io/flynt">Palette</a>
@@ -26,22 +26,9 @@
 
 ## Philosophy
 
-Most themes colorize keywords — `if`, `for`, `return` — as primary visual anchors. Flynt doesn't. Keywords render in body-text weight. They're grammatical connective tissue, not semantic content.
+In most themes, `if`, `for`, `return` are among the brightest things on screen. Flynt goes the other way. Keywords render in plain body-text weight; they're words you already know. Functions get amber instead, the primary accent. What code *does* matters more than what it *is*.
 
-Instead, **functions take the primary accent** (amber). Properties dim deliberately. Punctuation reads at full contrast. Comments nearly disappear.
-
-The result: your eye goes to what code is *doing*, not what it syntactically *is*.
-
-| Role | Token | Rationale |
-|------|-------|-----------|
-| Keyword | `tx-2` | Body-text weight — already understood, shouldn't compete |
-| Function | `amber` | Primary accent — what code does matters most |
-| String | `delft` | Blue, not the conventional green |
-| Number | `teal` | Distinct from strings and identifiers |
-| Operator | `rose` | Visible but warm, not jarring |
-| Property | `tx-4` | Deliberately dim — structural noise |
-| Punctuation | `tx` | Full contrast — the shape of code matters |
-| Comment | `tx-5` | Nearly invisible — you've already read it |
+Properties fade into the background. Punctuation reads at full contrast. Comments are barely there. The goal is that your eye lands on meaning, not scaffolding.
 
 <br />
 
