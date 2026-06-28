@@ -1,31 +1,9 @@
 const P = {
-    hues: {
-        ember: 5,
-        clay: 23,
-        amber: 45,
-        moss: 75,
-        fern: 105,
-        teal: 175,
-        delft: 208,
-        iris: 258,
-        plum: 328,
-        rose: 345,
-    },
-    saturations: {
-        ember: 65, clay: 55, amber: 65,
-        moss: 45, fern: 40, teal: 40,
-        delft: 45, iris: 50, plum: 50, rose: 60,
-    },
     shades: [
         "50", "100", "150", "200",
         "300", "400", "500", "600",
         "700", "800", "850", "900", "950",
     ],
-    lightness: {
-        50: 91, 100: 87, 150: 81, 200: 76,
-        300: 64, 400: 53, 500: 47, 600: 42,
-        700: 36, 800: 27, 850: 21, 900: 16, 950: 11,
-    },
     primaryShade: { dark: "500", light: "500" },
     base: {
         dark: {
@@ -55,25 +33,9 @@ const P = {
     },
 };
 
-function hslToHex(h, s, l) {
-    s /= 100;
-    l /= 100;
-    const a = s * Math.min(l, 1 - l);
-    const f = (n) => {
-        const k = (n + h / 30) % 12;
-        return Math.round(255 * (l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1)))
-            .toString(16)
-            .padStart(2, "0");
-    };
-    return `#${f(0)}${f(8)}${f(4)}`.toUpperCase();
-}
+const ACCENT_ORDER = ["ember", "clay", "amber", "moss", "fern", "teal", "delft", "iris", "plum", "rose"];
 
 const accents = {};
-for (const [name, hue] of Object.entries(P.hues)) {
-    accents[name] = {};
-    for (const sh of P.shades)
-        accents[name][sh] = hslToHex(hue, P.saturations[name], P.lightness[sh]);
-}
 
 const urlTheme = new URLSearchParams(window.location.search).get("theme");
 let theme = urlTheme === "dark" || urlTheme === "light" ? urlTheme : "dark";
@@ -293,7 +255,7 @@ function renderBase() {
 function renderAccents() {
     const row = document.getElementById("accent-row");
     row.innerHTML = "";
-    for (const name of Object.keys(P.hues))
+    for (const name of ACCENT_ORDER)
         row.appendChild(makeSwatch(name, primary(name)));
 }
 
@@ -313,7 +275,8 @@ function renderExtended() {
         grid.appendChild(el);
     }
 
-    for (const [name, shades] of Object.entries(accents)) {
+    for (const name of ACCENT_ORDER) {
+        const shades = accents[name];
         const lbl = document.createElement("div");
         lbl.className = "shade-name";
         lbl.textContent = name;
@@ -470,9 +433,18 @@ function setTheme(t) {
     render();
 }
 
+async function init() {
+    const resp = await fetch("palette.json");
+    const palette = await resp.json();
+    for (const [name, shades] of Object.entries(palette.shades)) {
+        accents[name] = shades;
+    }
+    render();
+}
+
 document.addEventListener("keydown", (e) => {
     if ((e.key === "d" || e.key === "D") && !e.metaKey && !e.ctrlKey)
         setTheme(theme === "dark" ? "light" : "dark");
 });
 
-render();
+init();
