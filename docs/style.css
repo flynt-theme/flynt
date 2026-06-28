@@ -17,7 +17,7 @@
     --tx-3: #a89a88;
     --tx-4: #79685a;
     --tx-5: #584f45;
-    --accent: #b4963c;
+    --accent: #c69f2a;
 }
 [data-theme="light"] {
     --bg: #fffcef;
@@ -30,7 +30,7 @@
     --tx-3: #6a5c4c;
     --tx-4: #8e806f;
     --tx-5: #b2a899;
-    --accent: #b4963c;
+    --accent: #c69f2a;
 }
 
 body {
@@ -567,6 +567,30 @@ td:last-child {
 }
 #toast.show {
     opacity: 1;
+}
+
+/* ── Ports ───────────────────────────────────────── */
+
+.port-list {
+    list-style: none;
+}
+
+.port-item {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--bg-2);
+    font-size: 14px;
+}
+
+.port-item a {
+    font-weight: 600;
+    min-width: 48px;
+}
+
+.port-item span {
+    color: var(--tx-4);
 }
 
 /* ── Footer ──────────────────────────────────────── */

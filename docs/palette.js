@@ -1,5 +1,4 @@
 const P = {
-    saturation: 50,
     hues: {
         ember: 5,
         clay: 23,
@@ -11,6 +10,11 @@ const P = {
         iris: 258,
         plum: 328,
         rose: 345,
+    },
+    saturations: {
+        ember: 65, clay: 55, amber: 65,
+        moss: 45, fern: 40, teal: 40,
+        delft: 45, iris: 50, plum: 50, rose: 60,
     },
     shades: [
         "50", "100", "150", "200",
@@ -68,7 +72,7 @@ const accents = {};
 for (const [name, hue] of Object.entries(P.hues)) {
     accents[name] = {};
     for (const sh of P.shades)
-        accents[name][sh] = hslToHex(hue, P.saturation, P.lightness[sh]);
+        accents[name][sh] = hslToHex(hue, P.saturations[name], P.lightness[sh]);
 }
 
 const urlTheme = new URLSearchParams(window.location.search).get("theme");
