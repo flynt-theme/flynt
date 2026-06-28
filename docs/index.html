@@ -481,6 +481,7 @@
             table {
                 width: 100%;
                 border-collapse: collapse;
+                table-layout: fixed;
             }
 
             thead th {
@@ -500,11 +501,27 @@
                 vertical-align: middle;
                 font-size: 13px;
                 color: var(--tx-2);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
             td:last-child {
                 color: var(--tx-4);
                 padding-right: 0;
+                white-space: normal;
             }
+
+            /* Fixed column widths shared across guide tables */
+            #t-interface th:nth-child(1),
+            #t-syntax th:nth-child(1),
+            #t-markup th:nth-child(1) { width: 18%; }
+            #t-interface th:nth-child(2),
+            #t-syntax th:nth-child(2),
+            #t-markup th:nth-child(2) { width: 22%; }
+
+            #t-terminal th:nth-child(1) { width: 6%; }
+            #t-terminal th:nth-child(2) { width: 18%; }
+            #t-terminal th:nth-child(3) { width: 22%; }
 
             .dot {
                 display: inline-block;
