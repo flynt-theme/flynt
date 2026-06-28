@@ -10,25 +10,22 @@
 <p align="center">
   <a href="https://flynt-theme.github.io/flynt">Palette</a>
   ·
+  <a href="https://flynt-theme.github.io/flynt#philosophy">Philosophy</a>
+  ·
   <a href="https://flynt-theme.github.io/flynt#style-guide">Style Guide</a>
+  ·
+  <a href="https://flynt-theme.github.io/flynt#ports">Ports</a>
 </p>
 
 <br />
 
 <table align="center" border="0" cellspacing="0" cellpadding="8"><tr>
-  <td><a href="https://flynt-theme.github.io/flynt?theme=dark"><img src="docs/assets/palette-pill-dark.svg" width="400" alt="Flynt Dark" /></a></td>
-  <td><a href="https://flynt-theme.github.io/flynt?theme=light"><img src="docs/assets/palette-pill-light.svg" width="400" alt="Flynt Light" /></a></td>
+  <td><a href="https://flynt-theme.github.io/flynt?theme=dark"><img src="docs/assets/preview-dark.svg" width="370" alt="Flynt Dark" /></a></td>
+  <td><a href="https://flynt-theme.github.io/flynt?theme=light"><img src="docs/assets/preview-light.svg" width="370" alt="Flynt Light" /></a></td>
 </tr></table>
 
-<p align="center"><sup>Click a pill to explore the full palette and style guide.</sup></p>
+## Contributing
 
-<br />
+There are plenty of apps out there waiting to be warmed up with a bit of Flynt. Use [strike](https://github.com/flynt-theme/strike) to build your port from a template, then open a PR or issue - accepted ports live under the [flynt-theme](https://github.com/flynt-theme) org.
 
-## Philosophy
-
-In most themes, `if`, `for`, `return` are among the brightest things on screen. Flynt goes the other way. Keywords render in plain body-text weight; they're words you already know. Functions get amber instead, the primary accent. What code *does* matters more than what it *is*.
-
-Properties fade into the background. Punctuation reads at full contrast. Comments are barely there. The goal is that your eye lands on meaning, not scaffolding.
-
-<br />
-
+Already a fan? GitHub stars and word of mouth go a long way.
