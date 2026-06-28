@@ -652,6 +652,25 @@
             </section>
 
             <section>
+                <h2>Philosophy</h2>
+
+                <h3>Keywords are not colorized</h3>
+                <p>Most themes assign their most saturated color to reserved words — <code>if</code>, <code>for</code>, <code>return</code>, <code>const</code>. Flynt renders them in body-text weight instead. Keywords are grammatical connective tissue. You already know what they mean; they shouldn't compete for attention.</p>
+
+                <h3>Functions take the primary accent</h3>
+                <p>Amber — the signature accent — goes to function names at definition and call sites. This inverts the visual hierarchy of most themes: your eye is drawn to what code is <em>doing</em>, not to its syntactic scaffolding.</p>
+
+                <h3>Properties recede</h3>
+                <p><code>obj.field</code> reads as an expression, not two equally weighted tokens. Object members and struct fields use <code>tx-4</code>, the second-to-dimmest foreground. The property is structural noise; you parse it but don't need to focus on it.</p>
+
+                <h3>Punctuation reads at full contrast</h3>
+                <p>Braces, brackets, and delimiters use <code>tx</code> — full foreground. Most themes dim these. Flynt treats structural delimiters as load-bearing: the shape of the code matters as much as its tokens.</p>
+
+                <h3>Comments nearly disappear</h3>
+                <p>Comments use <code>tx-5</code>, the faintest available token. Once read, a comment should recede. If it stays visible it competes with the code it describes.</p>
+            </section>
+
+            <section>
                 <h2>Style Guide</h2>
 
                 <h3>Interface</h3>
