@@ -650,6 +650,11 @@ td:last-child {
     color: var(--tx-4);
 }
 
+.section-note {
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
 /* ── Footer ──────────────────────────────────────── */
 
 footer {

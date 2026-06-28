@@ -30,7 +30,7 @@
                     <a href="#ports">Ports</a>
                 </nav>
                 <div class="header-actions">
-                    <div class="mode-switcher">
+                    <div class="mode-switcher" title="Press D to toggle">
                         <div class="mode-option" id="mode-dark" onclick="setTheme('dark')">
                             <span class="mode-label">Dark</span>
                             <div class="mode-pill" id="pill-dark" style="background: #100e0c"></div>
@@ -62,14 +62,16 @@
             </section>
 
             <section id="palette">
-                <h2>Base</h2>
+                <h2>Palette</h2>
+
+                <h3>Base</h3>
                 <div id="base-bg" class="swatch-row"></div>
                 <div id="base-tx" class="swatch-row" style="margin-top: 8px"></div>
 
-                <h2 style="margin-top: 48px">Accents</h2>
+                <h3>Accents</h3>
                 <div id="accent-row" class="swatch-row"></div>
 
-                <h2 style="margin-top: 48px">Extended</h2>
+                <h3>Extended</h3>
                 <div class="shade-wrap">
                     <div id="shade-grid" class="shade-grid"></div>
                 </div>
@@ -104,9 +106,7 @@
                 <table id="t-markup"></table>
 
                 <h3>Terminal</h3>
-                <p style="font-size: 13px; margin-bottom: 16px">
-                    Colors 0 and 7 use base tokens. Colors 1-6 map to accent primaries. Brights 9-14 use shade 300.
-                </p>
+                <p class="section-note">Colors 0 and 7 use base tokens. Colors 1-6 map to accent primaries. Brights 9-14 use shade 300.</p>
                 <table id="t-terminal"></table>
             </section>
 
@@ -115,7 +115,7 @@
                 <ul class="port-list">
                     <li class="port-item">
                         <a href="https://github.com/flynt-theme/flynt-ghostty">Ghostty</a>
-                        <span>Theme for the Ghostty terminal</span>
+                        <span>Theme for Ghostty</span>
                     </li>
                     <li class="port-item">
                         <a href="https://github.com/flynt-theme/flynt-iterm2">iTerm2</a>
@@ -123,25 +123,26 @@
                     </li>
                     <li class="port-item">
                         <a href="https://github.com/flynt-theme/flynt-obsidian">Obsidian</a>
-                        <span>Theme for the Obsidian note-taking app</span>
+                        <span>Theme for Obsidian</span>
                     </li>
                     <li class="port-item">
                         <a href="https://github.com/flynt-theme/flynt-vscode">VS Code</a>
-                        <span>Theme extension for Visual Studio Code</span>
+                        <span>Theme extension for VS Code</span>
                     </li>
                     <li class="port-item">
                         <a href="https://github.com/flynt-theme/flynt-warp">Warp</a>
-                        <span>Theme for the Warp terminal</span>
+                        <span>Theme for Warp</span>
                     </li>
                     <li class="port-item">
                         <a href="https://github.com/flynt-theme/flynt-zed">Zed</a>
-                        <span>Theme extension for the Zed editor</span>
+                        <span>Theme extension for Zed</span>
                     </li>
                 </ul>
             </section>
 
             <footer>
                 <a href="https://github.com/flynt-theme" target="_blank" rel="noopener noreferrer">Flynt Theme</a>
+                <a href="https://github.com/flynt-theme/flynt/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>
             </footer>
         </div>
 
