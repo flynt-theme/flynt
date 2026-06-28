@@ -103,10 +103,33 @@ header {
     margin-bottom: 40px;
 }
 
-.header-meta {
+.header-top {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--tx-3);
+    text-decoration: none;
+    transition: color 0.12s;
+}
+
+.github-link:hover {
+    color: var(--tx);
+    text-decoration: none;
 }
 
 .tagline {
