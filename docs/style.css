@@ -609,7 +609,7 @@ td:last-child {
 
 .port-item a {
     font-weight: 600;
-    min-width: 48px;
+    min-width: 90px;
 }
 
 .port-item span {
