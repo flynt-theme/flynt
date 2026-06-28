@@ -376,8 +376,8 @@ const GUIDE = {
     ],
     markup: [
         { role: "Heading",        token: "tx",    intent: "H1 → H6 descend through the text scale" },
-        { role: "Bold",           token: "tx",    intent: "Bold emphasis - full contrast" },
-        { role: "Italic",         token: "tx-2",  intent: "Italic emphasis - slightly muted" },
+        { role: "Bold",           token: "tx-3",  intent: "Bold emphasis - 1 step above body text" },
+        { role: "Italic",         token: "tx-5",  intent: "Italic emphasis - 1 step below body text" },
         { role: "Internal link",  token: "amber", intent: "Links to notes within the vault" },
         { role: "External link",  token: "teal",  intent: "Links to external URLs" },
         { role: "Unresolved",     token: "clay",  intent: "Links to notes that don't exist yet" },
