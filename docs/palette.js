@@ -442,6 +442,15 @@ async function init() {
     render();
 }
 
+document.getElementById("port-search").addEventListener("input", (e) => {
+    const q = e.target.value.toLowerCase();
+    document.querySelectorAll(".port-item").forEach((item) => {
+        const name = item.querySelector("a").textContent.toLowerCase();
+        const tag = item.querySelector(".port-tag").textContent.toLowerCase();
+        item.style.display = name.includes(q) || tag.includes(q) ? "" : "none";
+    });
+});
+
 document.addEventListener("keydown", (e) => {
     if ((e.key === "d" || e.key === "D") && !e.metaKey && !e.ctrlKey)
         setTheme(theme === "dark" ? "light" : "dark");

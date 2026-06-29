@@ -628,6 +628,28 @@ td:last-child {
 
 /* ── Ports ───────────────────────────────────────── */
 
+#port-search {
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--bg-2);
+    border: 1px solid var(--bg-3);
+    border-radius: 6px;
+    color: var(--tx);
+    font-size: 13px;
+    font-family: inherit;
+    padding: 7px 12px;
+    margin-bottom: 8px;
+    outline: none;
+}
+
+#port-search::placeholder {
+    color: var(--tx-4);
+}
+
+#port-search:focus {
+    border-color: var(--amber);
+}
+
 .port-list {
     list-style: none;
 }
@@ -646,8 +668,11 @@ td:last-child {
     min-width: 90px;
 }
 
-.port-item span {
+.port-tag {
     color: var(--tx-4);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 
 .section-note {
